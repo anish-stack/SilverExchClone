@@ -20,6 +20,14 @@ body {
     overflow-x: hidden !important;
 }
 
+@media screen and (max-width:768px) {
+    .Onhidden{
+        display: none;
+    }
+    .onshow{
+        width: 100%;
+    }
+}
 ::-webkit-scrollbar {
     display: none;
 }

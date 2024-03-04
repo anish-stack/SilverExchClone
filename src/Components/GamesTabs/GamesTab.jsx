@@ -31,7 +31,7 @@ const GamesTab = () => {
       {tabs.map((tab, index) => (
         <div
           key={index}
-          className={`cursor-pointer p-1 border-2 rounded ${activeTab === index ? 'text-white bg-[#04A1A6]' : ''}`}
+          className={`cursor-pointer px-8 py-2 border-2 rounded ${activeTab === index ? 'text-white bg-[#04A1A6]' : ''}`}
           onClick={() => handleTabClick(index)}
         >
           {tab}

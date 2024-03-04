@@ -37,10 +37,10 @@ const Tables = () => {
     return (
         <div className="w-full min-h-screen">
             <div className="w-full flex">
-                <div className="w-[15%]  bg-green-200">
+                <div className="w-[15%] Onhidden  bg-green-200">
                     {/* Sidebar or any other content */}
                 </div>
-                <div className="w-[85%] ">
+                <div className="w-[85%] onshow ">
                     <GamesTab />
                     {activeTabContent === 'Football' && <Football />}
                     {activeTabContent === 'Greyhound Racing' && <GreyHoundRaces />}
