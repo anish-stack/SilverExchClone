@@ -136,54 +136,54 @@ const RulesModel = () => {
       };
       
       
-  return (
-<div className="bg-gray-200 p-8 min-h-screen flex flex-col items-center justify-center">
-  <h1 className="text-4xl font-bold mb-6">Sports Rules</h1>
-  <div className="grid grid-cols-4 gap-4 relative">
-    {Object.keys(sportsData).map((sport, index) => (
-      <div key={index}  onClick={() => openModal(sportsData[sport])} className="p-4 bg-white rounded-lg shadow-md max-w-2xl transition-transform transform hover:scale-105 cursor-pointer "> {/* Set maximum width for the card */}
-        <img
-           src={sportsData[sport].image}// Replace with the actual image URL
-          alt={`Image for ${sport}`}
-          className="mb-4 max-w-full h-auto rounded-lg"
-        />
-        <button
-          className="text-blue-500 hover:underline text-lg"
-         
-        >
-          {sport}
-        </button>
-      </div>
-    ))}
-  </div>
-
-  <Modal
-    isOpen={selectedGame !== null}
-    onRequestClose={closeModal}
-    className="modal z-30 bg-white w-96 p-6 rounded-md shadow-md absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-  >
-    {selectedGame && (
-      <div>
-        <h2 className="text-3xl font-semibold mb-4">{selectedGame.name}</h2>
-        <img
-         src={selectedGame.image}// Replace with the actual image URL
-          alt={`Image for ${selectedGame.name}`}
-          className="mb-4 max-w-full h-auto rounded-lg"
-        />
-        <ul className="list-disc pl-6">
-          {selectedGame.rules.map((rule, ruleIndex) => (
-            <li key={ruleIndex} className="mb-2 text-lg">
-              {rule}
-            </li>
-          ))}
-        </ul>
-        <button onClick={closeModal} className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md">Close</button>
-      </div>
-    )}
-  </Modal>
-</div>
-
-   )
-}
-
+      return (
+        <div className="bg-gray-200 p-8 min-h-screen flex flex-col items-center justify-center">
+          <h1 className="text-4xl font-bold mb-6">Sports Rules</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 relative">
+            {Object.keys(sportsData).map((sport, index) => (
+              <div
+                key={index}
+                onClick={() => openModal(sportsData[sport])}
+                className="p-4 bg-white rounded-lg shadow-md max-w-2xl transition-transform transform hover:scale-105 cursor-pointer"
+              >
+                {/* Set maximum width for the card */}
+                <img
+                  src={sportsData[sport].image} // Replace with the actual image URL
+                  alt={`Image for ${sport}`}
+                  className="mb-4 max-w-full h-auto rounded-lg"
+                />
+                <button className="text-blue-500 hover:underline text-lg">{sport}</button>
+              </div>
+            ))}
+          </div>
+    
+          <Modal
+            isOpen={selectedGame !== null}
+            onRequestClose={closeModal}
+            className="modal z-30 bg-white w-full sm:w-96 p-6 rounded-md shadow-md absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          >
+            {selectedGame && (
+              <div>
+                <h2 className="text-3xl font-semibold mb-4">{selectedGame.name}</h2>
+                <img
+                  src={selectedGame.image} // Replace with the actual image URL
+                  alt={`Image for ${selectedGame.name}`}
+                  className="mb-4 max-w-full h-auto rounded-lg"
+                />
+                <ul className="list-disc pl-6">
+                  {selectedGame.rules.map((rule, ruleIndex) => (
+                    <li key={ruleIndex} className="mb-2 text-lg">
+                      {rule}
+                    </li>
+                  ))}
+                </ul>
+                <button onClick={closeModal} className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md">
+                  Close
+                </button>
+              </div>
+            )}
+          </Modal>
+        </div>
+      );
+    };
 export default RulesModel
