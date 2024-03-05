@@ -18,6 +18,7 @@ import Futsal from '../../Components/Games/Futsal/Futsal';
 
 import BasketBall from '../../Components/Games/BasketBall/BasketBall';
 import GameCard from "../../Components/AllGameCards/GameCard";
+import SideBars from "../../Components/SideBars/SideBars";
 
 
 
@@ -38,7 +39,7 @@ const Tables = () => {
         <div className="w-full min-h-screen">
             <div className="w-full flex">
                 <div className="w-[15%] Onhidden  bg-green-200">
-                    {/* Sidebar or any other content */}
+                    <SideBars/>
                 </div>
                 <div className="w-[85%] onshow ">
                     <GamesTab />

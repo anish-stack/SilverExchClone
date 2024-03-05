@@ -166,7 +166,7 @@ const Snokker = () => {
 
   return (
 <div className="w-full mx-auto my-5 overflow-x-auto">
-      <table className="min-w-full overflow-scroll  border border-gray-300">
+      <table className="min-w-full tablesmall overflow-scroll  border border-gray-300">
         <thead>
           <tr className="bg-gray-200">
             <th className="border border-gray-300 py-2 px-4">Match</th>

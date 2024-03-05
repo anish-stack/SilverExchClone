@@ -1,4 +1,3 @@
-import React from 'react';
 
 const GamesDetails = () => {
   const matchData = {
@@ -40,7 +39,7 @@ const GamesDetails = () => {
           <h2 className="text-lg font-bold mb-2">{market.name}</h2>
           <table className="table-auto w-full">
             <thead>
-              <tr className="bg-gray-800 text-white">
+              <tr className="bg-gray-800 text-left text-white">
                 <th className="py-2 px-4">Option</th>
                 <th className="py-2 px-4">Back</th>
                 <th className="py-2 px-4">Lay</th>

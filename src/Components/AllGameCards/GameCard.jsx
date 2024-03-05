@@ -30,7 +30,7 @@ const GameCard = () => {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
       {gamesData.map((game, index) => (
         <Link to={`/GamesPages/${game.name}`} key={index} className="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-          <img src={game.image} alt={game.name} className="w-full h-48 object-cover rounded-md mb-4" />
+          <img src={game.image} alt={game.name} className="w-full h-48 lg:object-cover rounded-md mb-4" />
           <div>
           <p className="text-lg text-center font-bold text-[#04A1A6]">{game.name}</p>
           </div>

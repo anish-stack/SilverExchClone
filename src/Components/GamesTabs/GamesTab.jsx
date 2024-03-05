@@ -27,7 +27,7 @@ const GamesTab = () => {
   };
 
   return (
-    <div className="flex mt-3 px-1 items-center justify-between max-w-[1400px]  overflow-x-auto gap-1">
+    <div className="flex mt-3 px-1 addinSamall flex-wrap gap-1">
       {tabs.map((tab, index) => (
         <div
           key={index}

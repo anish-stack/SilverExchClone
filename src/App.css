@@ -27,7 +27,40 @@ body {
     .onshow{
         width: 100%;
     }
+    .tablesmall{
+        width: 700px;
+    }
+    .addinSamall{
+        scroll-snap-type: x mandatory;
+        flex-wrap: nowrap;
+        scroll-behavior: smooth;
+        overflow-x: scroll;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1400px;
+    }
 }
 ::-webkit-scrollbar {
     display: none;
+}
+
+@keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .animate-blink {
+    animation: blink 1s infinite; /* Adjust the animation duration as needed */
+  }
+  .main-link{
+    transition: all 0.5s ease;
+    margin-top: 36pc;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
 }
