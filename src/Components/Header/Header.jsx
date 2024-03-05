@@ -62,11 +62,7 @@ const hanldeSignOut = () =>{
 
 
                             <div className={`navs ${showMenu ? 'flexs' : ''} `}>
-                                {showDropHeader === false && (
-                                    <li className='text-xl font-bold cursor-pointer transition-all duration-150 text-white hover:text-black'>
-                                        <Link >Show Categories <span><i className="ri-arrow-drop-down-fill text-2xl text-black "></i></span> </Link>
-                                    </li>
-                                )}
+                               
                                 <li onClick={handleonClose} className='text-xl font-bold cursor-pointer transition-all duration-150 text-white hover:text-black'><Link to="/Rules">Rules</Link></li>
                                 <li onClick={handleonClose} className='text-xl font-bold cursor-pointer transition-all duration-150 text-white hover:text-black'><Link to="/Balence" >Balance : 0</Link></li>
                                 <li className='text-xl relative user font-bold cursor-pointer transition-all duration-150  hover:text-black'>
