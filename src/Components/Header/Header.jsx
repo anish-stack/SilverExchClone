@@ -6,10 +6,10 @@ const Header = () => {
     const [showdrop, setShowDrop] = useState(false)
     const [showMenu, setshowMenu] = useState(false)
 
-const hanldeSignOut = () =>{
-    sessionStorage.removeItem('auth') 
-    window.location.href="/"
-}
+    const hanldeSignOut = () => {
+        sessionStorage.removeItem('auth')
+        window.location.href = "/"
+    }
     const handleMenuOpen = () => {
         setshowMenu(!showMenu)
     }
@@ -40,18 +40,18 @@ const hanldeSignOut = () =>{
 
 
     return (
-        <div className='w-full px-3 py-5 bg-[#04A1A6] shadow-lg'>
+        <div className='w-full   bg-[#04A1A6] shadow-lg'>
             <div className="w-full flex items-center justify-between">
                 <Link to="/" className='logo-side p-2'>
-                    <h2 className='text-2xl text-white text-pretty font-bold '>Silver Exch</h2>
+                    <img src="https://dzm0kbaskt4pv.cloudfront.net/v16/static/themes/silverexch.com/front/logo.png" className='w-[210px] h-20' alt="logo" />
                 </Link>
-                <div className='nav p-2'>
+                <div className='nav '>
                     <nav className='navbar'>
                         <ul className='list flex items-center gap-4'>
                             <li>
-                                <div className='Serach-Input w-[300px]'>
+                                <div className='Serach-Input w-[700px]'>
                                     <input
-                                        className='rounded-xl px-2 py-2 w-full focus:outline-2 focus:outline-red-400'
+                                        className='rounded-md px-2 py-2 w-full focus:outline-2 focus:outline-red-400'
                                         type=""
                                         name="search"
                                         value=""
@@ -62,7 +62,7 @@ const hanldeSignOut = () =>{
 
 
                             <div className={`navs ${showMenu ? 'flexs' : ''} `}>
-                               
+
                                 <li onClick={handleonClose} className='text-xl font-bold cursor-pointer transition-all duration-150 text-white hover:text-black'><Link to="/Rules">Rules</Link></li>
                                 <li onClick={handleonClose} className='text-xl font-bold cursor-pointer transition-all duration-150 text-white hover:text-black'><Link to="/Balence" >Balance : 0</Link></li>
                                 <li className='text-xl relative user font-bold cursor-pointer transition-all duration-150  hover:text-black'>

@@ -16,10 +16,33 @@ html {
 
 body {
     width: 100%;
+    font-family: "Poppins", sans-serif;
 
+    font-weight: 500;
     overflow-x: hidden !important;
 }
+.bg2{
+    background-color: #FAA9BA;
+    border-bottom: 1px solid white;
+}
+.bg1{
+    background-color: #72BBEf;
+}
 
+.lh{
+    line-height: 15px;
+}
+.roboto-condensed {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+@media screen and (max-width:520px) {
+    .Serach-Input {
+        width: 134px!important;
+    }
+}
 @media screen and (max-width:768px) {
     .Onhidden{
         display: flex;
@@ -74,3 +97,4 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
 }
+

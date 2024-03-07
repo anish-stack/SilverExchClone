@@ -27,11 +27,11 @@ const GamesTab = () => {
   };
 
   return (
-    <div className="flex mt-3 px-1 addinSamall flex-wrap gap-1">
+    <div className="flex mt-3 addinSamall flex-wrap ">
       {tabs.map((tab, index) => (
         <div
           key={index}
-          className={`cursor-pointer px-8 py-2 border-2 rounded ${activeTab === index ? 'text-white bg-[#04A1A6]' : ''}`}
+          className={`cursor-pointer px-1 py-1 text-sm  border-2 rounded ${activeTab === index ? 'text-white bg-[#04A1A6]' : 'bg-gray-300'}`}
           onClick={() => handleTabClick(index)}
         >
           {tab}

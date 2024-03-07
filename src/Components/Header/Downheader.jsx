@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link ,useLocation} from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setActiveTab, selectActiveTab } from '../../Store/Slices/TabSlice';
 
@@ -8,9 +7,16 @@ import './Header.css';
 const DownHeader = () => {
   const dispatch = useDispatch();
   const activeTab = useSelector(selectActiveTab);
+  const location = useLocation()
 
   const handleTabClick = (index) => {
     dispatch(setActiveTab(index));
+    if(location.pathname === '/'){
+      console.log('hello')
+    }else{
+      window.location.href=`/`
+    }
+
   };
 
   const navLinks = [
@@ -32,7 +38,7 @@ const DownHeader = () => {
   ];
 
   return (
-    <header className="text-white">
+    <header className="text-white h-10 bg-[#0F696E]">
       <div className="flex justify-between items-center">
         <nav>
           {navLinks.map((link) => (
@@ -40,7 +46,7 @@ const DownHeader = () => {
               key={link.index}
              
               onClick={() => handleTabClick(link.index)}
-              className={`animation-nav hover:text-gray-900 text-[18px] font-bold ${
+              className={`animation-nav hover:text-gray-900 text-[16px] font-semibold text-strech ${
                 activeTab === link.index ? 'active' : ''
               }`}
             >

@@ -165,44 +165,75 @@ const Snokker = () => {
   ];
 
   return (
-<div className="w-full mx-auto my-5 overflow-x-auto">
-      <table className="min-w-full tablesmall overflow-scroll  border border-gray-300">
+    <div className="w-full mx-auto  overflow-x-auto">
+      <table className="min-w-full tablesmall overflow-scroll ">
         <thead>
-          <tr className="bg-gray-200">
-            <th className="border border-gray-300 py-2 px-4">Match</th>
-            <th className="border border-gray-300 py-2 px-4"></th>
-            <th className="border border-gray-300 py-2 px-4"></th>
-            <th className="border border-gray-300 py-2 px-4">1</th>
-            <th className="border border-gray-300 py-2 px-4">X</th>
-            <th className="border border-gray-300 py-2 px-4">2</th>
+          <tr className="">
+            <th className="text-left py-2 px-4">Games</th>
+            <th className=" py-2 px-4"></th>
+            <th className=" py-2 px-4"></th>
+            <th className=" py-2 px-4"></th>
+            <th className=" py-2 px-4"></th>
+            <th className=" py-2 px-4"></th>
+
+
+
+            <th className=" py-2 px-4">1</th>
+            <th className=" py-2 px-4">X</th>
+            <th className=" py-2 px-4">2</th>
           </tr>
         </thead>
         <tbody>
           {data.map((match, index) => (
-            <tr key={index} className={index % 2 === 0 ? 'bg-gray-100' : ''}>
-              <td className="border hover:underline border-gray-300 py-2 px-4">
+            <tr key={index} className={index % 2 === 0 ? '' : ''}>
+              <td className="text-sm  text-gray-800 hover:underline  ">
                 <Link to={`/GameInfo/${encodeURIComponent(match.name)}`}>{match.name}</Link>
               </td>
-              <td className="border border-gray-300 py-2 px-4">{match.dot && <i className="ri-circle-fill text-green-500"></i>}</td>
-              <td className="border border-gray-300 py-2 px-4">{match.tv && <i className="ri-tv-2-line text-blue-500"></i>}</td>
-              <td className="border border-gray-300 py-2 px-4">
-                <div className="flex w-full md:flex-col gap-2 text-center items-center justify-between">
+              <td className="text-sm text-gray-800  ">{match.dot && <i className="ri-circle-fill text-green-500"></i>}</td>
+              <td className="text-sm text-gray-800  ">{match.tv && <i className="ri-tv-2-line text-blue-500"></i>}</td>
+              <td className="text-sm text-gray-800  "><img src="https://i.ibb.co/pfxvVhv/image.png" className='w-5' alt="" /></td>
+              <td className="text-sm text-gray-800  "><img src="https://i.ibb.co/3zpjfz0/image.png" className='w-5' alt="" /></td>
+              <td className="text-sm text-gray-800  "><img src="https://i.ibb.co/R4hVk5k/image.png" className='w-5' alt="" /></td>
+
+
+
+              <td className="text-sm text-gray-800  ">
+                <div className="flex w-full  text-center items-center justify-between">
                   {match.First.map((number, idx) => (
-                    <div key={idx} className="text-center w-1/2 bg-red-200 text-blue-500">{number}</div>
+                    <div
+                      key={idx}
+                      className={`text-center w-1/2 px-3 py-1 text-[#273A47] ${idx === 0 ? 'bg1' : 'bg2'}`}
+
+
+                    >
+                      {number}
+                    </div>
                   ))}
                 </div>
               </td>
-              <td className="border border-gray-300 py-2 px-4">
-                <div className="flex w-full gap-2 text-center items-center justify-between">
+              <td className="text-sm  text-gray-800  ">
+                <div className="flex w-full  text-center items-center justify-between">
                   {match.Cross.map((number, idx) => (
-                    <div key={idx} className="text-center w-1/2 bg-blue-200 text-green-500">{number}</div>
+                    <div
+                      key={idx}
+                      className={`text-center w-1/2 px-3 py-1 text-[#273A47] ${idx === 0 ? 'bg1' : 'bg2'}`}
+
+                    >
+                      {number}
+                    </div>
                   ))}
                 </div>
               </td>
-              <td className="border border-gray-300 py-2 px-4">
-                <div className="flex w-full gap-2 text-center items-center justify-between">
+              <td className="text-sm text-gray-800  ">
+                <div className="flex w-full  text-center items-center justify-between">
                   {match.Second.map((number, idx) => (
-                    <div key={idx} className="text-center w-1/2 bg-orange-200 text-red-500">{number}</div>
+                    <div
+                      key={idx}
+                      className={`text-center w-1/2 px-3 py-1 text-[#273A47] ${idx === 0 ? 'bg1' : 'bg2'}`}
+
+                    >
+                      {number}
+                    </div>
                   ))}
                 </div>
               </td>

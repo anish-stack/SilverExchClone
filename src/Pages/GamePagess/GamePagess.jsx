@@ -7,7 +7,7 @@ const GamePagess = () => {
   return (
     <div className='w-full min-h-screen flex flex-col md:flex-row justify-between'>
       {/* Main Content */}
-      <div className='w-full md:w-4/5 bg-red-200 p-4'>
+      <div className='w-full md:w-4/5  p-4'>
         {/* Screen */}
         <div className='screen bg-[#04A1A6] flex items-center justify-between text-white p-4'>
           <h2 className='text-2xl'>{name}</h2>
@@ -45,7 +45,7 @@ const GamePagess = () => {
       </div>
 
       {/* Sidebar */}
-      <div className='w-full md:w-1/5 bg-green-200 p-4'>
+      <div className='w-full md:w-1/5  p-4'>
         {/* My Bet */}
         <div className='my-bet bg-white p-4 mb-4'>
           <h2 className='text-xl font-semibold mb-2'>My Bet</h2>

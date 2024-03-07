@@ -27,12 +27,12 @@ const GameCard = () => {
   return (
     <div className="container mx-auto p-4">
     {/* <h1 className="text-4xl font-bold mb-8 text-center text-[#04A1A6]">List of Games</h1> */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
       {gamesData.map((game, index) => (
-        <Link to={`/GamesPages/${game.name}`} key={index} className="bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105">
-          <img src={game.image} alt={game.name} className="w-full h-48 lg:object-cover rounded-md mb-4" />
-          <div>
-          <p className="text-lg text-center font-bold text-[#04A1A6]">{game.name}</p>
+        <Link to={`/GamesPages/${game.name}`} key={index} className="bg-white rounded-lg shadow-md  transform ">
+          <img src={game.image} alt={game.name} className="w-full relative h-48 lg:object-cover rounded-md " />
+          <div className="bg-[#04A1A6] absolute w-full bottom-0">
+          <p className="text-lg text-center font-bold text-[#000]">{game.name}</p>
           </div>
           {/* Additional details or actions can be added here */}
         </Link>

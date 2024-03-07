@@ -38,12 +38,12 @@ const HorseRacing = () => {
   return (
     <div className="w-full min-h-screen bg-gray-200">
       <div className="w-[80%]">
-        <div className="flex ml-5 gap-5 px-5 py-2  text-white">
+        <div className="flex ml-5  px-5 py-2  text-white">
           {/* Add tabs here with onClick event */}
           {Object.keys(data).map((tab) => (
             <div
               className={`cursor-pointer py-2 px-5 ${
-                activeTab === tab ? 'bg-[#04A1A6]' : 'bg-black'
+                activeTab === tab ? 'bg-[#04A1A6]' : 'bg-[#CCCCCC]'
               }`}
               key={tab}
               onClick={() => handleTabClick(tab)}
@@ -54,7 +54,7 @@ const HorseRacing = () => {
         </div>
         <div className="min-h-[20vh] p-5">
           {/* Render content based on the selected tab */}
-          <table className="table-auto w-full">
+          <table className="table-auto text-left w-full">
             <thead>
               <tr>
                 <th className="px-4 py-2">Place</th>
